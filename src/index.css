@@ -19,7 +19,7 @@ body {
 
 .bg-gradient-main {
   background: linear-gradient(to top, rgba(251, 129, 7, 0.17), rgba(255, 198, 48, 0)),
-  url('src/images/Background_Clean.jpg') no-repeat center center;
+  url('./images/Background_Clean.jpg') no-repeat center center;
   background-size: cover;
 }
 

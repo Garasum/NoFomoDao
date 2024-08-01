@@ -6,6 +6,7 @@ import rocket from "./rocket.png";
 import trophy from "./trophy.png";
 import tasks from "./tasks.jpg";
 import bitcoin from "./bitcoin.png";
+import background from "./Background_Clean.jpg";
 
 export {
     bear,
@@ -15,5 +16,6 @@ export {
     rocket,
     trophy,
     tasks,
-    bitcoin
+    bitcoin,
+    background
 }

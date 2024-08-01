@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import './index.css';
 import Arrow from './icons/Arrow';
-import {coin, highVoltage, rocket, tasks, trophy, bitcoin} from './images';
+import {coin, highVoltage, rocket, tasks, trophy, bitcoin, background} from './images';
 import { Frens  } from './utils/Frens';
 import { Earn } from './utils/Earn';
 import { Boosts } from './utils/Boosts';
@@ -55,6 +55,11 @@ const App:  React.FC = () => {
 
   return (
       <div className="bg-gradient-main min-h-screen px-4 flex flex-col items-center text-white font-medium">
+        <div
+            className="bg-gradient-main"
+            style={{backgroundImage: `url(${background})`}} // Dynamically set background image
+        ></div>
+
         <div className="absolute inset-0 h-1/2 bg-gradient-overlay z-0"></div>
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <div className="radial-gradient-overlay"></div>
@@ -73,17 +78,17 @@ const App:  React.FC = () => {
               </div>
             </div>
             <div className="mt-12 text-5xl font-bold flex items-center">
-              <img src={coin} width={44} height={44} />
+              <img src={coin} width={44} height={44}/>
               <span className="ml-2">{points.toLocaleString()}</span>
             </div>
             <div className="text-base mt-2 flex items-center">
-              <img src={trophy} width={24} height={24} />
+              <img src={trophy} width={24} height={24}/>
               <span className="ml-1">
-              Gold <Arrow size={18} className="ml-0 mb-1 inline-block" />
+              Gold <Arrow size={18} className="ml-0 mb-1 inline-block"/>
             </span>
             </div>
           </div>
-          {activeOverlay === 'LinkWallet' && <LinkWallet closeOverlay={closeOverlay} />}
+          {activeOverlay === 'LinkWallet' && <LinkWallet closeOverlay={closeOverlay}/>}
           {activeOverlay && (
               <div className="overlay-background" onClick={closeOverlay}></div>
           )}
@@ -92,7 +97,7 @@ const App:  React.FC = () => {
             <div className="w-full flex justify-between gap-2">
               <div className="w-1/3 flex items-center justify-start max-w-32">
                 <div className="flex items-center justify-center">
-                  <img src={highVoltage} width={44} height={44} alt="High Voltage" />
+                  <img src={highVoltage} width={44} height={44} alt="High Voltage"/>
                   <div className="ml-2 text-left">
                     <span className="text-white text-2xl font-bold block">{energy}</span>
                     <span className="text-white text-large opacity-75">/ 6500</span>
@@ -102,17 +107,17 @@ const App:  React.FC = () => {
               <div className="flex-grow flex items-center max-w-60 text-sm">
                 <div className="w-full bg-[#f3c45a] py-4 rounded-2xl flex justify-around">
                   <button className="flex flex-col items-center gap-1" onClick={() => handleButtonClick('Frens')}>
-                    <img src={tasks} width={24} height={24} alt="Frens" />
+                    <img src={tasks} width={24} height={24} alt="Frens"/>
                     <span>Tasks</span>
                   </button>
                   <div className="h-[48px] w-[2px] bg-[#f3c45a]"></div>
                   <button className="flex flex-col items-center gap-1" onClick={() => handleButtonClick('Earn')}>
-                    <img src={coin} width={24} height={24} alt="Earn" />
+                    <img src={coin} width={24} height={24} alt="Earn"/>
                     <span>Earn</span>
                   </button>
                   <div className="h-[48px] w-[2px] bg-[#f3c45a]"></div>
                   <button className="flex flex-col items-center gap-1" onClick={() => handleButtonClick('Boosts')}>
-                    <img src={rocket} width={24} height={24} alt="Boosts" />
+                    <img src={rocket} width={24} height={24} alt="Boosts"/>
                     <span>Airdrop</span>
                   </button>
                 </div>
@@ -121,14 +126,14 @@ const App:  React.FC = () => {
             <div className="w-full bg-[#f9c035] rounded-full mt-4">
               <div
                   className="bg-gradient-to-r from-[#f3c45a] to-[#fffad0] h-4 rounded-full"
-                  style={{ width: `${(energy / 6500) * 100}%` }}
+                  style={{width: `${(energy / 6500) * 100}%`}}
               ></div>
             </div>
           </div>
 
           <div className="flex-grow flex items-center justify-center">
             <div className="relative mt-4" onClick={handleClick}>
-              <img src={bitcoin} width={256} height={256} alt="notcoin" />
+              <img src={bitcoin} width={256} height={256} alt="notcoin"/>
               {clicks.map((click) => (
                   <div
                       key={click.id}
@@ -146,9 +151,9 @@ const App:  React.FC = () => {
             </div>
           </div>
 
-          {activeOverlay === 'Frens' && <Frens closeOverlay={closeOverlay} />}
-          {activeOverlay === 'Earn' && <Earn closeOverlay={closeOverlay} />}
-          {activeOverlay === 'Boosts' && <Boosts closeOverlay={closeOverlay} />}
+          {activeOverlay === 'Frens' && <Frens closeOverlay={closeOverlay}/>}
+          {activeOverlay === 'Earn' && <Earn closeOverlay={closeOverlay}/>}
+          {activeOverlay === 'Boosts' && <Boosts closeOverlay={closeOverlay}/>}
 
           {activeOverlay && (
               <div className="overlay-background" onClick={closeOverlay}></div>
