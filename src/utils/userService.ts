@@ -1,6 +1,6 @@
 // src/services/UserDataService.ts
 import { db } from "../firebase-config";
-import { collection, getDoc, addDoc, updateDoc, doc, DocumentData, DocumentReference, setDoc } from "firebase/firestore";
+import { collection, getDoc, addDoc, updateDoc, doc, DocumentData, DocumentReference } from "firebase/firestore";
 
 const userCollectionRef = collection(db, "users");
 

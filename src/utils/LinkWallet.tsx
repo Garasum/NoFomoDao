@@ -8,7 +8,8 @@ interface LinkWalletProps {
 
 export const LinkWallet: React.FC<LinkWalletProps> = ({closeOverlay}) => {
     const [inputValue, setInputValue] = useState('');
-    const [userId, setUserId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
+    const [userId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
+    // const [userId, setUserId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
@@ -24,13 +25,14 @@ export const LinkWallet: React.FC<LinkWalletProps> = ({closeOverlay}) => {
 
         } catch (error) {
             console.error('Error updating wallet name: ', error);
-            alert(`Failed to update wallet name. ${error.message}`);
+            // alert(`Failed to update wallet name. ${error.message}`);
+            alert(`Failed to update wallet name.`);
         }
     };
 
-    const changeUserId = (newUserId: string) => {
-        setUserId(newUserId);
-    };
+    // const changeUserId = (newUserId: string) => {
+    //     setUserId(newUserId);
+    // };
 
     return (
         <div className="overlay">
