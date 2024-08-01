@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import './index.css';
 import Arrow from './icons/Arrow';
-import {coin, highVoltage, notcoin, rocket, tasks, trophy} from './images';
+import {coin, highVoltage, rocket, tasks, trophy, bitcoin} from './images';
 import { Frens  } from './utils/Frens';
 import { Earn } from './utils/Earn';
 import { Boosts } from './utils/Boosts';
@@ -100,17 +100,17 @@ const App:  React.FC = () => {
                 </div>
               </div>
               <div className="flex-grow flex items-center max-w-60 text-sm">
-                <div className="w-full bg-[#fad258] py-4 rounded-2xl flex justify-around">
+                <div className="w-full bg-[#f3c45a] py-4 rounded-2xl flex justify-around">
                   <button className="flex flex-col items-center gap-1" onClick={() => handleButtonClick('Frens')}>
                     <img src={tasks} width={24} height={24} alt="Frens" />
                     <span>Tasks</span>
                   </button>
-                  <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
+                  <div className="h-[48px] w-[2px] bg-[#f3c45a]"></div>
                   <button className="flex flex-col items-center gap-1" onClick={() => handleButtonClick('Earn')}>
                     <img src={coin} width={24} height={24} alt="Earn" />
                     <span>Earn</span>
                   </button>
-                  <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
+                  <div className="h-[48px] w-[2px] bg-[#f3c45a]"></div>
                   <button className="flex flex-col items-center gap-1" onClick={() => handleButtonClick('Boosts')}>
                     <img src={rocket} width={24} height={24} alt="Boosts" />
                     <span>Airdrop</span>
@@ -128,7 +128,7 @@ const App:  React.FC = () => {
 
           <div className="flex-grow flex items-center justify-center">
             <div className="relative mt-4" onClick={handleClick}>
-              <img src={notcoin} width={256} height={256} alt="notcoin" />
+              <img src={bitcoin} width={256} height={256} alt="notcoin" />
               {clicks.map((click) => (
                   <div
                       key={click.id}
