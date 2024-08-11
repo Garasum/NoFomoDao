@@ -8,7 +8,7 @@ export const Boosts: React.FC<BoostsProps> = ({ closeOverlay }) => (
     <div className="overlay">
         <div className="overlay-content">
             <button className="close-button" onClick={closeOverlay}>X</button>
-            <h1>Boosts Content</h1>
+            <h1>SOON ?</h1>
         </div>
     </div>
 );

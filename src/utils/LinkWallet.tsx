@@ -9,7 +9,6 @@ interface LinkWalletProps {
 export const LinkWallet: React.FC<LinkWalletProps> = ({closeOverlay}) => {
     const [inputValue, setInputValue] = useState('');
     const [userId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
-    // const [userId, setUserId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
