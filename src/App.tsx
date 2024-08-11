@@ -12,7 +12,8 @@ import UserDataService from './utils/userService.ts';
 const App: React.FC = () => {
     console.log('App component rendered'); // Log every time the component renders
     const [userId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
-    const [userData, setUserData] = useState(null);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [, setUserData] = useState(null);
     const [points, setPoints] = useState(0);
     const [energy, setEnergy] = useState(0);
     const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);

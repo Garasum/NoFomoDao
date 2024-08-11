@@ -10,10 +10,9 @@ export const Earn: React.FC<EarnProps> = ({closeOverlay}) => {
 
     const [userId] = useState('kKya8irumCT0ReUQWutZ'); // Default user ID
     // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    const [points, setPoints] = useState(0); // Assuming you have points in state
+    const [, setPoints] = useState(0); // Assuming you have points in state
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [lastCollected, setLastCollected] = useState(0); // Assuming you have lastCollected time in state
+    const [, setLastCollected] = useState(0); // Assuming you have lastCollected time in state
 
 
     const claimReward = async (e: React.FormEvent) => {
